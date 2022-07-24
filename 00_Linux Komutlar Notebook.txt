@@ -1,0 +1,145 @@
+mavi: klasör
+beyaz: dosya
+yeşil: execute
+
+pwd # Hangi dizinde olduğunuzu öğrenmek için “pwd” komutunu kullanabilirsiniz.
+
+ls - l ./Clarusway/  # Tüm Dos ve Klas. detaylı listeler.
+ls -al ./Clarusway/materials/  # Tüm Dos ve Klas.(giz dahil) detaylı gösteririr. dosya başındaki tek nokta gizli olduğunu ifade eder.
+ls dosya[A-D].txt # A ile D arasındaki dosyaları listeler.
+ls dosya[A,B].txt # A ve B dosyalarını listeler.
+ls *.txt  # geçerli konumdaki txt uzantılı dosyaların hepsini listeler.
+ls lab?.txt # Lab ile başlayan txt uzantılı sonunu bilmediğimiz dosyaları listeler.
+ls -l kitap.txt  # sadece kitap dosyasını detaylı listeler.
+
+cd ../ # 1 üst klasöre gittim
+# home klasörüne geri dönmek için.
+cd /home/marcus
+cd
+cd ~
+cd - # zamansal olarak bir önceki dizine gider.
+
+clear # ekranı temizler.
+
+
+touch .workshop.txt # doosya başına . konduğu için oluşturulan dosya gizli dosyadır. 
+touch multiple1.txt multiple2.txt ... multiple10.txt # birden fazla dosya da oluşturulabilir. Pratik yolu aşağıdaki gibi.
+touch multiple{1..10}.txt  # 10 tane multiple klasörü oluşturur. sonu 1-10 arası olur.
+touch ali\ kahraman # iki kelimenin arasında boşluk oluşturarak dosya oluşturur.
+
+mkdir -p session3/folder1/folder2/folder3 # bulunulan klasörde se.. altına fol.1, fol.1 altına fol.2.... oluşturdu.
+mkdir -pv session4/folder1/folder2 # pv komutunu ekleyince yaptığını bildiriyor.
+mkdir folder{1..15}  # isminin sonu 1-15 arası folder'lar oluşturdu.
+mkdir -p ~/d5/d2”  home da d5 altında d2 klasörü oluşturdu.
+
+echo "hello hello" > file1 # file1 in içine tırnak içindekileri yazdırdı.
+cat file1  # file 1 de yazılı olanları döndürdü.
+echo "Line 2" >> file1 # yazılı olanların üzerine ekleme yapar.(append) > tek olması durumunda eskiyi siler. yeniyi yazar.
+
+cat > file3 # file 3 dosyası içerisine yazmaya başlar. CTRL+D yapana kadar yazmaya devam eder.
+cat >> file3 # append yapar.
+
+man ls > man_ls.txt  # ls komutunun man'ını man_ls.txt. dosyasına yazdırır.
+history > asd.txt  # geçmişi asd dosyasına yazdırır.
+history komut satırı açıldığından itibaren yazılan tüm komutları gösterir.
+
+explorer.exe .  # klasörleri windows da görmeye yarar.
+
+rm file3  # File3 boş ise siler.
+rm fi*  # başı fi olan bütün dosyaları siler. 
+rmdir *3 # sonu 3 olan bütün klasörleri siler.
+rm -rf folder2 # içi dolu klasörü silmeye yarar.
+rm file?.txt  # file ile başlayıp 5. karakteri olan tüm dosyaları siler.
+
+cp cp lab.txt newlab.txt  # lab içeriği ile beraber kopyalar. newlab adında bir dosya oluşturur.
+cp ./folder3/file3 ./folder2/file5  
+
+mv [filename1] [filename2] # Rename a file
+mv /home/abdullah/folder1/file1 ./folder2/file3 # Taşıma işlemi yapar.
+ 
+head /etc/passwd # ilk 10 satırı getirir.
+head-5 file.txt # file dosyasının baştan 5 satırını getir.
+tail /etc/passwd
+tail -5 file.txt # sonda 5 satır
+
+mv *1* ./folder3
+mv ????? ./folder3
+ls | grep '2$'
+
+man mkdir
+info mkdir
+cd --help
+
+
+
+chmod u=rwx,g=rwx,o=rwx [file_name] # Bir dosyayı okumak, yazmak ve yürütmek için herkese açık olacak şekilde ayarlamak için
+chmod u=rwx,g=rwx,o=rwx linuxlab.txt
+chmod -v 777 linuxlab.txt # r (read) 4, w (write) 2, (e) x (excute) 1, izin yok 0, tüm izinler 7 oluyor.
+chmod -v ugo=rwx js.js # toplu değişim.
+chmod -v +r linuxlab.txt # linuxlab.txt dosyasında tüm kullanıcılara r yetkisi verir.
+
+ping -c 5 google.com  # google ın IP adresi, iletişim varmı yokmu.vs 5 satır bilgileri pingden çıkış: ctrl+c 
+ping
+
+
+
+/root # root kullanıcısının home'ı
+/home # normal kullanıcıların home'i
+
+apsulut olabilmesi için adresin /home den başlaması gerekir.  ../ değil.
+cp newlab.txt /home/san/clarusway # (absolute path)
+cp newlab.txt ../clarusway/  # (relative path)
+
+Vim Editor
+Vim Command Decription
+
+i Ekleme moduna girin
+Esc Komut moduna girin
+x veya Del Bir karakteri sil
+X Silme karakteri geri alma modudur
+u Değişiklikleri geri al
+Ctrl + r Değişiklikleri yinele
+yy Bir satırı kopyala
+dd Bir satırı sil
+p Tamponun içeriğini yapıştırın
+[[ veya gg Dosyanın başına git
+]] veya G Dosyanın sonuna git
+:%s/foo/bar/g Tüm oluşumları arayın ve değiştirin
+Esc + :w Değişiklikleri kaydet
+Esc + :wq veya Esc + ZZ Kaydedin ve Vim'den çıkın.
+q! zorla çık.
+
+nano filename   # bir dosyanın nano editöre giriş yapabilmesi için.
+
+Nano Editor
+
+GNU nano, küçük ve kullanımı kolay bir metin düzenleyicisidir.
+Temel metin düzenlemenin yanı sıra nano, aşağıdaki gibi özellikler sunar:
+• geri al/yinele
+• sözdizimi renklendirme
+• etkileşimli arama ve değiştirme
+• otomatik girinti
+• Satır numaraları
+• kelime tamamlama
+• dosya kilitleme, yedekleme dosyaları
+• uluslararasılaştırma desteği
+
+# nano Komutlar
+
+Ctrl G Yardım Alın
+Ctrl X Çıkış
+Ctrl O Yaz
+Ctrl R Dosyayı Oku
+Ctrl W Nerede
+Ctrl \ Değiştir
+Ctrl K Metni Kes
+Ctrl U Kesilmemiş Metin
+Ctrl J Yasla
+Yazım için Ctrl T
+Ctrl C Cur Poz
+Alt U Geri Al
+Alt E Yinele
+
+wc  # dosyadaki karakter sayısını bulmaya yarar.
+
+ctrl + r # history'de arama yapar.
