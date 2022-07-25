@@ -1,4 +1,4 @@
-mavi: klasör
+mavi: klasör,
 beyaz: dosya
 yeşil: execute
 
