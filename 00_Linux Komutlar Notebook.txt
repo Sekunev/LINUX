@@ -1,5 +1,5 @@
 mavi: klasör
-beyaz: dosya
+beyaz: dosya,
 yeşil: execute
 
 pwd # Hangi dizinde olduğunuzu öğrenmek için “pwd” komutunu kullanabilirsiniz.
