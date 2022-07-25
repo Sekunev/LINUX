@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-mavi: klasör
-beyaz: dosya,
-=======
+GİT/GİTHUP KOMUTLARI
 mavi: klasör,
-beyaz: dosya
->>>>>>> e2e5d3cdfd5b645356e36b3adf2c74e72b9e9750
+beyaz: dosya,
 yeşil: execute
 
 pwd # Hangi dizinde olduğunuzu öğrenmek için “pwd” komutunu kullanabilirsiniz.
