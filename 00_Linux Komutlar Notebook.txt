@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 mavi: klasör
 beyaz: dosya,
+=======
+mavi: klasör,
+beyaz: dosya
+>>>>>>> e2e5d3cdfd5b645356e36b3adf2c74e72b9e9750
 yeşil: execute
 
 pwd # Hangi dizinde olduğunuzu öğrenmek için “pwd” komutunu kullanabilirsiniz.
